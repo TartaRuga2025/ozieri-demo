@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phrasebook – Greetings</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    body { padding: 16px; }
+    h1 { color: #0fb7c6; }
+    .phrase { margin: 12px 0; font-size: 1.1rem; }
+    button.audio-btn {
+      margin-left: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Greetings</h1>
+  <p>Click the speaker to hear pronunciation.</p>
+
+  <div class="phrase">
+    Buongiorno! (hello, polite form)
+    <button class="audio-btn" onclick="document.getElementById('p1').play()">🔊</button>
+    <audio id="p1" src="./mp3/greetings_buongiorno.mp3"></audio>
+  </div>
+
+  <div class="phrase">
+    Ciao! (hello, familiar/informal)
+    <button class="audio-btn" onclick="document.getElementById('p2').play()">🔊</button>
+    <audio id="p2" src="./mp3/greetings_ciao.mp3"></audio>
+  </div>
+
+  <!-- Duplicate <div class="phrase"> blocks as needed -->
+
+  <p style="margin-top: 2em;">
+    <a href="../index.html">⬅ Back to App</a>
+  </p>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <meta name="theme-color" content="#0fb7c6"/>
+    <title>Ozieri App (Demo – No Install)</title>
+    <!-- Manifest intentionally disabled for demo -->
+    <!-- <link rel="manifest" href="./manifest.webmanifest"/> -->
+    <link rel="icon" href="./assets/icon-192.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="./assets/icon-192.png">
+    <link rel="stylesheet" href="./styles.css"/>
+  </head>
+  <body>
+    <div class="splash" onclick="this.classList.add('hidden')" role="dialog" aria-label="Splash screen">
+      <img src="./assets/splash.png" alt="Ozieri illustration"/>
+      <h1>OZIERI</h1>
+      <p>APP</p>
+    </div>
+
+    <div id="app" role="application">
+      <header>OZIERI APP</header>
+      <div class="nav" role="tablist" aria-label="Sections"></div>
+      <main class="content">
+        <div id="mount" class="section active" role="region" aria-live="polite"></div>
+      </main>
+      <footer class="callbar"><a href="tel:+39078123456789">☎ 078-123456789</a></footer>
+      <!-- Install button intentionally removed for demo -->
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
