@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Phrasebook — Greetings: goodbye</title>
+
+  <!-- Embedded chapter CSS (mobile-first) -->
+  <style>
+    :root{
+      --ink:#111827;           /* body text */
+      --muted:#6b7280;         /* secondary text */
+      --rule:#e5e7eb;          /* separators */
+      --brand:#0fb7c6;         /* heading accent (Ozieri app teal) */
+      --bg:#ffffff;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, Arial, sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+    }
+
+    /* Page frame (comfortable phone reading width) */
+    .wrap{
+      max-width: 44rem;        /* still looks great on tablets */
+      margin: 0 auto;
+      padding: 16px 14px 28px;
+    }
+
+    /* 1) Chapter heading */
+    .chapter-title{
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing:.2px;
+      color:var(--brand);
+      margin: 4px 0 8px;
+    }
+    .chapter-rule{
+      height:2px;background:var(--rule);border:0;margin:6px 0 14px;border-radius:1px;
+    }
+
+    /* 2) Intro / subsection text */
+    .intro,
+    .subhead{
+      font-size:.97rem; line-height:1.5;
+      margin:12px 0 8px;
+      color:var(--ink);
+    }
+    .subhead{
+      margin-top:18px;
+      font-weight:700;
+      font-size: .92rem;
+      color:var(--muted);
+      text-transform:none;
+    }
+
+    /* 3–4) Phrase block */
+    .phrase{
+      padding:10px 0 12px;
+      border-bottom:1px solid var(--rule);
+    }
+    .phrase:last-child{border-bottom:0}
+
+    /* top row: Italian + speaker */
+    .phrase .it{
+      display:flex; align-items:center; gap:10px;
+      font-size:1.05rem;
+      font-weight:800;           /* Italian in bold */
+    }
+    .phrase .en{
+      margin-top:4px;
+      font-size:.96rem;
+      color:var(--muted);        /* English beneath */
+    }
+
+    /* Speaker button – accessible, thumb-friendly */
+    .btn-speak{
+      display:inline-flex; align-items:center; justify-content:center;
+      width:34px; height:34px;
+      border-radius:999px; border:1px solid var(--rule);
+      background:#fff; cursor:pointer;
+      transition: box-shadow .15s ease, transform .06s ease;
+    }
+    .btn-speak:active{ transform: scale(.96) }
+    .btn-speak:focus-visible{ outline:2px solid var(--brand); outline-offset:2px }
+
+    /* Tiny SVG icon stays sharp on any DPR */
+    .btn-speak svg{ width:18px; height:18px; }
+
+    /* Compact spacing on very small screens */
+    @media (max-width:360px){
+      .wrap{ padding:14px 12px 24px }
+      .chapter-title{ font-size:1.25rem }
+      .phrase .it{ font-size:1.02rem }
+    }
+    @media (min-width:700px){
+      .wrap{ border:1px solid var(--rule); border-top:none; border-bottom:none }
+    }
+    /* Respect user preference */
+    @media (prefers-reduced-motion: reduce){
+      .btn-speak{ transition:none }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap" role="main">
+    <!-- Chapter heading -->
+    <h1 class="chapter-title">Greetings – goodbye</h1>
+    <hr class="chapter-rule" aria-hidden="true" />
+
+    <!-- Introductory text -->
+    <p class="intro">
+      As in English, the ways of saying goodbye depend on levels of
+      formality. Here are the ones you need to know:
+    </p>
+
+    <!-- Core phrases -->
+    <section aria-label="Core phrases">
+      <article class="phrase">
+        <div class="it">
+          <strong>Arrivederci</strong>
+          <button class="btn-speak" data-audio="./mp3/greetings_arrivederci.mp3" aria-label="Play: Arrivederci">
+            <!-- speaker icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M11 5l-5 4H3v6h3l5 4z"></path>
+              <path d="M15 9a5 5 0 0 1 0 6"></path>
+              <path d="M17.5 5.5a9 9 0 0 1 0 13"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="en">Goodbye (polite)</div>
+      </article>
+
+      <article class="phrase">
+        <div class="it">
+          <strong>Ciao</strong>
+          <button class="btn-speak" data-audio="./mp3/greetings_ciao.mp3" aria-label="Play: Ciao">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M11 5l-5 4H3v6h3l5 4z"></path>
+              <path d="M15 9a5 5 0 0 1 0 6"></path>
+              <path d="M17.5 5.5a9 9 0 0 1 0 13"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="en">Goodbye, See you (familiar)</div>
+      </article>
+
+      
+    </section>
+
+    <!-- Subsection -->
+    <p class="subhead">You might also hear:</p>
+
+    <section aria-label="Alternate greetings">
+  
+      <article class="phrase">
+        <div class="it">
+          <strong>ArrivederLa!</strong>
+          <button class="btn-speak" data-audio="./mp3/greetings_arrivederla.mp3" aria-label="Play: ArrivederLa">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M11 5l-5 4H3v6h3l5 4z"></path>
+              <path d="M15 9a5 5 0 0 1 0 6"></path>
+              <path d="M17.5 5.5a9 9 0 0 1 0 13"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="en">Goodbye (polite)</div>
+      </article>
+    </section>
+
+    <!-- Subsection -->
+    <p class="subhead">Related phrases:</p>
+
+    <section aria-label="Related phrases">
+      <article class="phrase">
+        <div class="it">
+          <strong>Ci vediamo!</strong>
+          <button class="btn-speak" data-audio="./mp3/greetings_ci_vediamo.mp3" aria-label="Play: Ci vediamo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M11 5l-5 4H3v6h3l5 4z"></path>
+              <path d="M15 9a5 5 0 0 1 0 6"></path>
+              <path d="M17.5 5.5a9 9 0 0 1 0 13"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="en">See you!</div>
+      </article>
+
+      <article class="phrase">
+        <div class="it">
+          <strong>A presto!</strong>
+          <button class="btn-speak" data-audio="./mp3/greetings_a_presto.mp3" aria-label="Play: A presto">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M11 5l-5 4H3v6h3l5 4z"></path>
+              <path d="M15 9a5 5 0 0 1 0 6"></path>
+              <path d="M17.5 5.5a9 9 0 0 1 0 13"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="en">See you soon!</div>
+      </article>
+
+      <article class="phrase">
+        <div class="it">
+          <strong>Alla prossima!</strong>
+          <button class="btn-speak" data-audio="./mp3/greetings_alla_prossima.mp3" aria-label="Play: Alla prossima">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M11 5l-5 4H3v6h3l5 4z"></path>
+              <path d="M15 9a5 5 0 0 1 0 6"></path>
+              <path d="M17.5 5.5a9 9 0 0 1 0 13"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="en">See you soon</div>
+      </article>
+
+      <article class="phrase">
+        <div class="it">
+          <strong>Mi raccomando!</strong>
+          <button class="btn-speak" data-audio="./mp3/greetings_mi_raccomando.mp3" aria-label="Play: Mi raccomando">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M11 5l-5 4H3v6h3l5 4z"></path>
+              <path d="M15 9a5 5 0 0 1 0 6"></path>
+              <path d="M17.5 5.5a9 9 0 0 1 0 13"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="en">Take care!</div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Reusable audio element (saves memory, works offline in PWA) -->
+  <audio id="player" preload="none"></audio>
+
+  <!-- Tiny script: tap any speaker to play its MP3 from /MP3/ -->
+  <script>
+    document.addEventListener('click', (ev)=>{
+      const btn = ev.target.closest('.btn-speak');
+      if(!btn) return;
+      const src = btn.getAttribute('data-audio');
+      if(!src) return;
+
+      const player = document.getElementById('player');
+      /* If the same file is tapped again, restart from the beginning for snappy UX */
+      if(player.src.endsWith(src)){ player.currentTime = 0; }
+      else { player.src = src; }
+
+      player.play().catch(()=>{ /* no-op if autoplay prevented */ });
+    });
+  </script>
+</body>
+</html>

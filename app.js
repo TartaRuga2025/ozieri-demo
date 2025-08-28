@@ -61,7 +61,8 @@ const sections = {
 
   "PHRASEBOOK": {
     "Greetings": [
-      { "name": "Hello/Goodbye",            "url": "./phrasebook/greetings.html" },
+      { "name": "Hello",            "url": "./phrasebook/greetings_hello.html" },
+      { "name": "Goodbye",            "url": "./phrasebook/greetings_goodbye.html" },
       { "name": "How are you?",         "url": "#" }
     ],
     "Numbers": [
